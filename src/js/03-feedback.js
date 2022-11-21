@@ -19,7 +19,7 @@ form.addEventListener('input', throttle(() => {
 form.addEventListener('submit', (e) => {
     e.preventDefault();
     console.log(JSON.parse(localStorage.getItem("feedback-form-state")));
-    localStorage.clear();
+    localStorage.removeItem("feedback-form-state");
     email.value = '';
     message.value = '';
 })
